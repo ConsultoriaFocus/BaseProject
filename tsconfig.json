@@ -1,12 +1,42 @@
 {
+    "compileOnSave": true,
     "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
         "outDir": "./dist",
-        "module": "CommonJS",
-        "target": "es2019",
+        "rootDir": "./src",
+        "removeComments": false,
+        "resolveJsonModule": true,
+
+        "strict": true,
+        "strictPropertyInitialization": false,
+
+        "moduleResolution": "node",
+        "baseUrl": "./src",
+        "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
-        "allowJs": true,
-        "strictNullChecks": false
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "paths": {
+            "@root/*": ["./src/*"],
+            "@modules/*": ["./src/modules/*"],
+            "@libray/*": ["./src/libray/*"],
+            "@models/*": ["./src/models/*"],
+            "@routes/*": ["./src/routes/*"],
+            "@utils/*": ["./src/utils/*"],
+            "@decorators/*": ["./src/decorators/*"]
+        }
     },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules","./dist/"]
+    "exclude": [
+        "node_modules",
+        "dist",
+        "__tests__",
+        "types"
+    ],
+    "include": [
+        "src/**/*",
+        "setEnvVars.ts"
+    ]
 }
