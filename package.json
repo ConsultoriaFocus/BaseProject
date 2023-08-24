@@ -9,8 +9,7 @@
     "lint:fix": "eslint ./src/ --ext .ts --fix",
     "build:docs": "npm run build && npm run docs",
     "dev": "nodemon -L",
-    "docs": "typedoc",
-    "prepare": "husky install"
+    "docs": "typedoc"
   },
   "keywords": [],
   "author": "",
